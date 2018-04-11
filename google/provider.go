@@ -183,6 +183,7 @@ func Provider() terraform.ResourceProvider {
 			"google_service_account_iam_member":            ResourceIamMemberWithImport(IamServiceAccountSchema, NewServiceAccountIamUpdater, ServiceAccountIdParseFunc),
 			"google_service_account_iam_policy":            ResourceIamPolicyWithImport(IamServiceAccountSchema, NewServiceAccountIamUpdater, ServiceAccountIdParseFunc),
 			"google_service_account_key":                   resourceGoogleServiceAccountKey(),
+			"google_stackdriver_alert_policy":              resourceStackdriverAlertPolicy(),
 			"google_storage_bucket":                        resourceStorageBucket(),
 			"google_storage_bucket_acl":                    resourceStorageBucketAcl(),
 			// Legacy roles such as roles/storage.legacyBucketReader are automatically added
